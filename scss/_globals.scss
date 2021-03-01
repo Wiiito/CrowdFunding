@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 1rem;
+}
+
+.none {
+    display: none;
+    opacity: 0;
+}
+
+.hide {
+    &-for-desktop {
+        @include breakpoint-up(medium){
+            display: none;
+        }
+    }
+    &-for-mobile {
+        @include breakpoint-down(medium){
+            display: none;
+        }
+    }
+}
+.show {
+    &-for-mobile {
+        @include breakpoint-down(small) {
+            display: none;
+        }
+    }
+}

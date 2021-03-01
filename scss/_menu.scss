@@ -1,0 +1,98 @@
+.header {
+    width: calc(100% - 10.375rem * 2);
+    height: 19rem;
+    background: url(../images/image-hero-desktop.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 10.375rem;
+
+    @include breakpoint-down(medium) {
+        width: calc(100% - 5rem * 2);
+        height: 12.75rem;
+        padding: 3rem 5rem;
+    }
+    @include breakpoint-down(small) {
+        background-image: url(../images/image-hero-mobile.jpg);
+        width: calc(100% - 2rem * 2);
+        height: calc(19rem - 68px);
+        padding: 2rem;
+    }
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo, &__menu {
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+    }
+
+
+    &__links {
+        z-index: 10;
+
+        @include breakpoint-up(medium){
+            visibility: visible;
+            ul {
+                list-style: none;
+                display: flex;
+    
+                li {
+    
+    
+                    &:not(:first-child) {
+                        margin-left: 2rem;
+                    }
+                }
+    
+                li a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        @include breakpoint-down(small){
+            position: fixed;
+            width: calc(100% - 2rem * 2);
+            top: 5.5rem;
+            background-color: white;
+            border-radius: 5px;
+            visibility: hidden;
+
+            ul{
+                list-style: none;
+
+                li {
+                    padding: 1.59375rem 1.5rem;
+
+                    &:not(:last-child) {
+                        border-bottom: $lightGray 1px solid;
+                    }
+                }
+
+                li a {
+                    text-decoration: none;
+                    color: $black;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+.black-thing {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: linear-gradient(180deg, rgba($black,0.50) 0%, rgba($black,0.20) 100%);
+    transition: ease-in-out .2s;
+    visibility: hidden;
+    z-index: 5;
+}

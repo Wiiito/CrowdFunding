@@ -1,0 +1,60 @@
+.goal {
+    &__container {
+        @include breakpoint-up(medium) {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__item {
+            width: 100%;
+            @include breakpoint-up(medium) {
+                text-align: left;
+                &:not(:last-child) {
+                    border-right: rgba($black, 0.2) 1px solid;
+                }
+                &:not(:first-child) {
+                    padding-left: 3rem;
+                }
+            }
+            h1 {
+                font-size: 1.5rem;
+                margin-bottom: 1.125rem;
+                @include breakpoint-up(medium) {
+                    margin-bottom: 0.875rem;
+                }
+            }
+            h2 {
+                font-size: 0.75rem;
+                color: $darkGray;
+                font-weight: 400;
+                @include breakpoint-down(small) {
+                    margin-bottom: 1.625rem;
+                }
+            }
+        }
+
+        .line {
+            width: 5rem;
+            height: 1px;
+            background: $darkGray;
+            transform: translateX(-50%);
+            margin-left: 50%;
+            margin-bottom: 2.2rem;
+        }
+    }
+    &__bar {
+        width: 89.914%;
+        background: $moderateCyan;
+        height: 100%;
+        border-radius: 5px;
+        &__container{
+            height: 10px;
+            width: 100%;
+            background: $lightGray;
+            border-radius: 5px;
+            overflow: hidden;
+            @include breakpoint-up(medium) {
+                margin-top: 1.625rem;
+            }
+        }
+    }
+}

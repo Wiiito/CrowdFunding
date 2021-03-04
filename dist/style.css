@@ -543,6 +543,7 @@ body {
 
 .modal__header__title h2 {
   font-weight: 400;
+  color: #3cb4ac;
 }
 
 .modal__header input {
@@ -606,6 +607,7 @@ body {
 }
 
 .modal__pledge {
+  display: none;
   border-top: #f4f4f4 2px solid;
   padding: 1.75rem 1.5rem;
 }

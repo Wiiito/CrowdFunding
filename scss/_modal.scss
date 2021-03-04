@@ -1,8 +1,167 @@
+body {
+    background-color: black;
+}
 .modal {
     background-color: white;
-    position: absolute;
-    margin: auto;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+
+    .subtitle-modal {
+        font-size: 0.75rem;
+        text-align: left;
+        color: $darkGray;
+        font-weight: 400;
+        line-height: 1.25rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__header {
+        display: flex;
+        height: 2.25rem;
+        align-items: center;
+        padding: 1.75rem 1.5rem;
+
+        &__title {
+            text-align: left;
+            margin-left: 1rem;
+            line-height: 1.125rem;
+
+            h2 {
+                font-weight: 400;
+            }
+        }
+
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            display: inline-block;
+            background-clip: content-box;
+            border: 2px solid #e2e2e2;
+            background-color: none;
+            border-radius: 50%;
+            padding: 3px;
+            transition: .2s ease-in-out;
+
+            height: 1.5rem;
+            width: 1.5rem;
+            background-clip: content-box;
+
+            &:checked {
+                background-color: $moderateCyan;
+            }
+        }
+    }
+
+    &__info {
+        padding: 0 1.5rem;
+        text-align: left;
+
+        p {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: $darkGray;
+            line-height: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $darkGray;
+            margin-bottom: 1.75rem;
+
+            span {
+                margin-right: 8px;
+                font-weight: 700;
+                color: black;
+            }
+        }
+    }
+
+    &__line {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            font-size: 1rem;
+        }
+        button {
+            background: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    &__pledge {
+        border-top: $lightGray 2px solid;
+        padding: 1.75rem 1.5rem;
+
+        h1 {
+            font-weight: 400;
+            color: $darkGray;
+            margin-bottom: 1.375rem;
+        }
+
+        &__form {
+            display: flex;
+            justify-content: space-between;
+
+            &__input {
+                height: 2.875rem;
+                line-height: 2.875rem;
+                width: 5.5rem;
+                border: $darkGray 1px solid;
+                border-radius: 100px;
+                text-align: left;
+                cursor: text;
+                font-family: 'Commissioner', sans-serif;
+                font-weight: 700;
+
+                span {
+                    color: $darkGray;
+                    margin-right: 0.5rem;
+                    margin-left: 1.5rem;
+                    font-size: 0.9rem;
+                }
+
+                input {
+                    width: calc(100% - 52px);
+                    height: 100%;
+                    outline: none;
+                    background: none;
+                    font-family: 'Commissioner', sans-serif;
+                    font-weight: 700;
+                    
+                    &::-webkit-outer-spin-button,
+                    &::-webkit-inner-spin-button {
+                        -webkit-appearance: none;
+                    }
+                }
+            }
+            button {
+                width: 7rem;
+                height: 3rem;
+                color: white;
+                background: #3cb4ac;
+                border-radius: 50px;
+                cursor: pointer;
+                outline: none;
+                transition: .2s ease-in-out;
+            }
+        }
+    }
+
+    article {
+        padding: 0;
+        border: $darkGray 1px solid;
+        margin-bottom: 1.5rem;
+        h1 {
+            font-size: 0.75rem;
+        }
+        h2 {
+            font-size: 0.75rem;
+        }
+    }
 }

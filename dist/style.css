@@ -508,10 +508,6 @@ section .article-shadow {
   background: #7a7a7a;
 }
 
-body {
-  background-color: black;
-}
-
 .modal {
   background-color: white;
   padding: 2rem 1.5rem;

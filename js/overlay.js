@@ -1,3 +1,4 @@
+//Overlay
 const hbm_btn = document.getElementById('menu_btn');
 const cls_btn = document.getElementById('close_btn');
 const fadeElems = document.querySelectorAll('.has-fade');
@@ -28,3 +29,33 @@ function checkAll () {
 hbm_btn.addEventListener('click', checkAll);
 cls_btn.addEventListener('click', checkAll);
 thing.addEventListener('click', checkAll);
+
+//Bookmark
+
+document.querySelector('.text__btns__bookmark').addEventListener('click', () => {
+    if (document.getElementById('book').checked){
+        document.getElementById('bookmark-txt').innerHTML = "Bookmark";
+    } else {
+        document.getElementById('bookmark-txt').innerHTML = "Bookmarked";
+    }
+})
+
+//Modal
+const inputModal = document.querySelectorAll('.modal-input');
+
+
+inputModal.forEach((element) => {
+    var id = element.dataset.id;
+    var pledge = document.getElementById(`modal-pledge-${id}`);
+
+    element.addEventListener('click', () => {
+        hideAll();
+        pledge.style.display = "block";
+    })
+})
+
+function hideAll () {
+    inputModal.forEach((element) => {
+        document.getElementById(`modal-pledge-${element.dataset.id}`).style.display = "none";
+    })
+}

@@ -108,6 +108,8 @@ function closeModal () {
     modal.classList.remove('fade-in');
     thing.classList.remove('fade-in');
 
+    document.getElementById('modal').style.display = "none";
+
     modal.classList.add('fade-out');
     thing.classList.add('fade-out');
 }

@@ -63,12 +63,12 @@
     <article class="article-shadow goal">
       <div class="goal__container">
         <div class="goal__container__item">
-          <h1>$89,914</h1>
+          <h1 id="backed">$89,914</h1>
           <h2>of $100,000 backed</h2>
           <div class="line hide-for-desktop"></div>
         </div>
         <div class="goal__container__item">
-          <h1>5,007</h1>
+          <h1 id="backers">5,007</h1>
           <h2>total backers</h2>
           <div class="line hide-for-desktop"></div>
         </div>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="goal__bar__container">
-        <div class="goal__bar"></div>
+        <div class="goal__bar" id="goal-bar"></div>
       </div>
     </article>
 
@@ -167,12 +167,12 @@
       <div class="modal__pledge" id="modal-pledge-01">
         <div class="modal__pledge__container">
           <h1>Enter your pledge</h1>
-          <form action="#" class="modal__pledge__form">
+          <form class="modal__pledge__form">
             <label class="modal__pledge__form__input" for="pledge-form-input">
               <span>$</span>
-              <input type="number" value="0">
+              <input type="number" value="0" id="pledge-input-01">
             </label>
-            <button>Continue</button>
+            <button class="buying-btn" data-id="01">Continue</button>
           </form>
         </div>
       </div>
@@ -194,12 +194,12 @@
       <div class="modal__pledge" id="modal-pledge-02">
         <div class="modal__pledge__container">
           <h1>Enter your pledge</h1>
-          <form action="#" class="modal__pledge__form">
+          <form class="modal__pledge__form">
             <label class="modal__pledge__form__input" for="pledge-form-input">
               <span>$</span>
-              <input type="number" value="25" min="25">
+              <input type="number" value="25" id="pledge-input-02">
             </label>
-            <button>Continue</button>
+            <button class="buying-btn" data-id="02">Continue</button>
           </form>
         </div>
       </div>
@@ -221,12 +221,12 @@
       <div class="modal__pledge" id="modal-pledge-03">
         <div class="modal__pledge__container">
           <h1>Enter your pledge</h1>
-          <form action="#" class="modal__pledge__form">
+          <form class="modal__pledge__form">
             <label class="modal__pledge__form__input" for="pledge-form-input">
               <span>$</span>
-              <input type="number" value="75" min="75">
+              <input type="number" value="75" id="pledge-input-03">
             </label>
-            <button>Continue</button>
+            <button class="buying-btn" data-id="03">Continue</button>
           </form>
         </div>
       </div>
@@ -248,12 +248,12 @@
       <div class="modal__pledge" id="modal-pledge-04">
         <div class="modal__pledge__container">
           <h1>Enter your pledge</h1>
-          <form action="#" class="modal__pledge__form">
+          <form class="modal__pledge__form">
             <label class="modal__pledge__form__input" for="pledge-form-input">
               <span>$</span>
-              <input type="number" value="0">
+              <input type="number" value="0" id="pledge-input-04">
             </label>
-            <button>Continue</button>
+            <button class="buying-btn" data-id="04">Continue</button>
           </form>
         </div>
       </div>
@@ -264,15 +264,19 @@
   <!-- Modal select End -->
 
   <!-- Success modal start -->
-  <!--
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-  -->
+
+  <div class="success-modal" id="modal">
+    <img src="./images/icon-check.svg" alt="Thx man! :D">
+    <h1>Thanks for your support!</h1>
+    <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+      an email once our campaign is completed.</p>
+    <button id="success-modal-btn">Got it!</button>
+  </div>
+
   <!-- Success modal end -->
 
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <script src="./js/overlay.js"></script>
+  <script src="./js/buying.js"></script>
 </body>
 </html>

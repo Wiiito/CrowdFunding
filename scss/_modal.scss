@@ -2,6 +2,16 @@
     background-color: white;
     padding: 2rem 1.5rem;
     border-radius: 10px;
+    position: absolute;
+    z-index: 20;
+    top: 7.5rem;
+    visibility: hidden;
+
+    @include breakpoint-up(medium) {
+        transform: translateX(-50%);
+        left: 50%;
+        width: calc(38rem - 48px);
+    }
 
     .subtitle-modal {
         font-size: 0.75rem;
@@ -23,10 +33,15 @@
             text-align: left;
             margin-left: 1rem;
             line-height: 1.125rem;
+            display: flex;
 
             h2 {
                 font-weight: 400;
                 color: $moderateCyan;
+
+                @include breakpoint-up(medium) {
+                    margin-left: 1rem;
+                }
             }
         }
 
@@ -69,6 +84,12 @@
             font-weight: 400;
             color: $darkGray;
             margin-bottom: 1.75rem;
+            
+            @include breakpoint-up(medium) {
+                position: absolute;
+                top: 2.125rem;
+                right: 1.75rem;
+            }
 
             span {
                 margin-right: 8px;
@@ -96,11 +117,25 @@
         display: none;
         border-top: $lightGray 2px solid;
         padding: 1.75rem 1.5rem;
+        line-height: 3rem;
 
         h1 {
             font-weight: 400;
             color: $darkGray;
             margin-bottom: 1.375rem;
+        }
+
+        &__container {
+
+            @include breakpoint-up(medium) {
+
+                display: flex;
+                justify-content: space-between;
+
+                h1 {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         &__form {
@@ -117,6 +152,15 @@
                 cursor: text;
                 font-family: 'Commissioner', sans-serif;
                 font-weight: 700;
+                transition: .2s ease-in-out;
+
+                &:hover {
+                    border-color: $darkCyan;
+                }
+
+                @include breakpoint-up(medium) {
+                    margin-right: 1rem;
+                }
 
                 span {
                     color: $darkGray;
@@ -148,6 +192,10 @@
                 cursor: pointer;
                 outline: none;
                 transition: .2s ease-in-out;
+
+                &:hover {
+                    background: $darkCyan;
+                }
             }
         }
     }
@@ -156,8 +204,20 @@
         padding: 0;
         border: $darkGray 1px solid;
         margin-bottom: 1.5rem;
+        position: relative;
+        transition: .2s ease-in-out;
+
         h1 {
             font-size: 0.75rem;
+        }
+        label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            transition: .2s ease-in-out;
+
+            &:hover {
+                color: $darkCyan;
+            }
         }
         h2 {
             font-size: 0.75rem;

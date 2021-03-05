@@ -95,4 +95,8 @@
     transition: ease-in-out .2s;
     visibility: hidden;
     z-index: 5;
+
+    @include breakpoint-up(medium) {
+        z-index: 15;
+    }
 }

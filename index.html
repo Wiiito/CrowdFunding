@@ -17,7 +17,7 @@
   </style>
 </head>
 <body>
-  <div class="black-thing hide-for-desktop has-fade"></div>
+  <div class="black-thing has-fade"></div>
 
   <header class="header">
     <div class="header__container">
@@ -45,7 +45,7 @@
         <h1>Mastercraft Bamboo Monitor Riser</h1>
         <h2>A beautiful & handcrafted monitor stand to reduce neck and eye strain.</h2>
         <div class="text__btns">
-          <button class="text__btns__back-project">Back this project</button>
+          <button class="text__btns__back-project slct-rwrd" data-id="01">Back this project</button>
           <input type="checkbox" name="book" id="book">
           <label for="book" class="text__btns__bookmark">
             <svg width="56px" height="56px" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@
           </p>
           <div class="buy">
             <h3><span>101</span><p>left</p></h3>
-            <button>Select Reward</button>
+            <button class="slct-rwrd" data-id="02">Select Reward</button>
           </div>
         </div>
 
@@ -122,7 +122,7 @@
           </p>
           <div class="buy">
             <h3><span>64</span><p>left</p></h3>
-            <button>Select Reward</button>
+            <button class="slct-rwrd" data-id="03">Select Reward</button>
           </div>
         </div>
 
@@ -137,7 +137,7 @@
           </p>
           <div class="buy">
             <h3><span>0</span><p>left</p></h3>
-            <button>Out of stock</button>
+            <button class="slct-rwrd" data-id="04">Out of stock</button>
           </div>
         </div>
       </div>
@@ -150,14 +150,14 @@
   <section class="modal">
     <div class="modal__line">
       <h1>Back this project</h1>
-      <button><img src="./images/icon-close-modal.svg" alt=""></button>
+      <button><img src="./images/icon-close-modal.svg" id="close-modal"></button>
     </div>
     <h2 class="subtitle-modal">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</h2>
     <article id="modal-container-01">
       <div class="modal__header">
-        <input type="radio" name="modal-input" class="modal-input" data-id="01">
+        <input type="radio" name="modal-input" class="modal-input" id="modal-input-01" data-id="01">
         <div class="modal__header__title">
-          <h1>Pledge with no reward</h1>
+          <label for="modal-input-01">Pledge with no reward</label>
         </div>
       </div>
       <div class="modal__info">
@@ -165,22 +165,24 @@
           you will be signed up to receive product updates via email.</p>
       </div>
       <div class="modal__pledge" id="modal-pledge-01">
-        <h1>Enter your pledge</h1>
-        <form action="#" class="modal__pledge__form">
-          <label class="modal__pledge__form__input" for="pledge-form-input">
-            <span>$</span>
-            <input type="number" value="0">
-          </label>
-          <button>Continue</button>
-        </form>
+        <div class="modal__pledge__container">
+          <h1>Enter your pledge</h1>
+          <form action="#" class="modal__pledge__form">
+            <label class="modal__pledge__form__input" for="pledge-form-input">
+              <span>$</span>
+              <input type="number" value="0">
+            </label>
+            <button>Continue</button>
+          </form>
+        </div>
       </div>
     </article>
 
     <article id="modal-container-02">
       <div class="modal__header">
-        <input type="radio" name="modal-input" class="modal-input" data-id="02">
+        <input type="radio" name="modal-input" class="modal-input" id="modal-input-02" data-id="02">
         <div class="modal__header__title">
-          <h1>Bamboo Stand</h1>
+          <label for="modal-input-02">Bamboo Stand</label>
           <h2>Pledge $25 or more</h2>
         </div>
       </div>
@@ -190,22 +192,24 @@
         <h3><span>101</span>left</h3>
       </div>
       <div class="modal__pledge" id="modal-pledge-02">
-        <h1>Enter your pledge</h1>
-        <form action="#" class="modal__pledge__form">
-          <label class="modal__pledge__form__input" for="pledge-form-input">
-            <span>$</span>
-            <input type="number" value="25">
-          </label>
-          <button>Continue</button>
-        </form>
+        <div class="modal__pledge__container">
+          <h1>Enter your pledge</h1>
+          <form action="#" class="modal__pledge__form">
+            <label class="modal__pledge__form__input" for="pledge-form-input">
+              <span>$</span>
+              <input type="number" value="25" min="25">
+            </label>
+            <button>Continue</button>
+          </form>
+        </div>
       </div>
     </article>
     
     <article id="modal-container-03">
       <div class="modal__header">
-        <input type="radio" name="modal-input" class="modal-input" data-id="03">
+        <input type="radio" name="modal-input" class="modal-input" id="modal-input-03" data-id="03">
         <div class="modal__header__title">
-          <h1>Black Edition Stand</h1>
+          <label for="modal-input-03">Black Edition Stand</label>
           <h2>Pledge $75 or more</h2>
         </div>
       </div>
@@ -215,22 +219,24 @@
         <h3><span>64</span>left</h3>
       </div>
       <div class="modal__pledge" id="modal-pledge-03">
-        <h1>Enter your pledge</h1>
-        <form action="#" class="modal__pledge__form">
-          <label class="modal__pledge__form__input" for="pledge-form-input">
-            <span>$</span>
-            <input type="number" value="75">
-          </label>
-          <button>Continue</button>
-        </form>
+        <div class="modal__pledge__container">
+          <h1>Enter your pledge</h1>
+          <form action="#" class="modal__pledge__form">
+            <label class="modal__pledge__form__input" for="pledge-form-input">
+              <span>$</span>
+              <input type="number" value="75" min="75">
+            </label>
+            <button>Continue</button>
+          </form>
+        </div>
       </div>
     </article>
     
     <article id="modal-container-04">
       <div class="modal__header">
-        <input type="radio" name="modal-input" class="modal-input" data-id="04">
+        <input type="radio" name="modal-input" class="modal-input" id="modal-input-04" data-id="04">
         <div class="modal__header__title">
-          <h1>Mahogany Special Edition</h1>
+          <label for="modal-input-04">Mahogany Special Edition</label>
           <h2>Pledge $200 or more</h2>
         </div>
       </div>
@@ -240,14 +246,16 @@
         <h3><span>0</span>left</h3>
       </div>
       <div class="modal__pledge" id="modal-pledge-04">
-        <h1>Enter your pledge</h1>
-        <form action="#" class="modal__pledge__form">
-          <label class="modal__pledge__form__input" for="pledge-form-input">
-            <span>$</span>
-            <input type="number" value="0">
-          </label>
-          <button>Continue</button>
-        </form>
+        <div class="modal__pledge__container">
+          <h1>Enter your pledge</h1>
+          <form action="#" class="modal__pledge__form">
+            <label class="modal__pledge__form__input" for="pledge-form-input">
+              <span>$</span>
+              <input type="number" value="0">
+            </label>
+            <button>Continue</button>
+          </form>
+        </div>
       </div>
     </article>
     

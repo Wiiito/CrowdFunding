@@ -129,6 +129,12 @@ body {
   z-index: 5;
 }
 
+@media (min-width: 40em) {
+  .black-thing {
+    z-index: 15;
+  }
+}
+
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -512,6 +518,18 @@ section .article-shadow {
   background-color: white;
   padding: 2rem 1.5rem;
   border-radius: 10px;
+  position: absolute;
+  z-index: 20;
+  top: 7.5rem;
+  visibility: hidden;
+}
+
+@media (min-width: 40em) {
+  .modal {
+    transform: translateX(-50%);
+    left: 50%;
+    width: calc(38rem - 48px);
+  }
 }
 
 .modal .subtitle-modal {
@@ -535,11 +553,18 @@ section .article-shadow {
   text-align: left;
   margin-left: 1rem;
   line-height: 1.125rem;
+  display: flex;
 }
 
 .modal__header__title h2 {
   font-weight: 400;
   color: #3cb4ac;
+}
+
+@media (min-width: 40em) {
+  .modal__header__title h2 {
+    margin-left: 1rem;
+  }
 }
 
 .modal__header input {
@@ -581,6 +606,14 @@ section .article-shadow {
   margin-bottom: 1.75rem;
 }
 
+@media (min-width: 40em) {
+  .modal__info h3 {
+    position: absolute;
+    top: 2.125rem;
+    right: 1.75rem;
+  }
+}
+
 .modal__info h3 span {
   margin-right: 8px;
   font-weight: 700;
@@ -606,12 +639,23 @@ section .article-shadow {
   display: none;
   border-top: #f4f4f4 2px solid;
   padding: 1.75rem 1.5rem;
+  line-height: 3rem;
 }
 
 .modal__pledge h1 {
   font-weight: 400;
   color: #7a7a7a;
   margin-bottom: 1.375rem;
+}
+
+@media (min-width: 40em) {
+  .modal__pledge__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .modal__pledge__container h1 {
+    margin-bottom: 0;
+  }
 }
 
 .modal__pledge__form {
@@ -629,6 +673,17 @@ section .article-shadow {
   cursor: text;
   font-family: 'Commissioner', sans-serif;
   font-weight: 700;
+  transition: .2s ease-in-out;
+}
+
+.modal__pledge__form__input:hover {
+  border-color: #147b74;
+}
+
+@media (min-width: 40em) {
+  .modal__pledge__form__input {
+    margin-right: 1rem;
+  }
 }
 
 .modal__pledge__form__input span {
@@ -662,14 +717,30 @@ section .article-shadow {
   transition: .2s ease-in-out;
 }
 
+.modal__pledge__form button:hover {
+  background: #147b74;
+}
+
 .modal article {
   padding: 0;
   border: #7a7a7a 1px solid;
   margin-bottom: 1.5rem;
+  position: relative;
+  transition: .2s ease-in-out;
 }
 
 .modal article h1 {
   font-size: 0.75rem;
+}
+
+.modal article label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  transition: .2s ease-in-out;
+}
+
+.modal article label:hover {
+  color: #147b74;
 }
 
 .modal article h2 {

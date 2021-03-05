@@ -90,6 +90,8 @@ slctRwrd.forEach((element) => {
             modal.classList.add('fade-in');
             thing.classList.add('fade-in');
 
+            $('html, body').animate({scrollTop: document.getElementById(`modal-container-${id}`).offsetHeight * (id * 0.8)}, 'slow');
+
             document.querySelector(`#modal-input-${id}`).checked = true;
             document.getElementById(`modal-pledge-${id}`).style.display = "block";
             document.getElementById(`modal-container-${id}`).style.borderColor = "hsl(176, 72%, 28%)";

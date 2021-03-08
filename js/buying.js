@@ -16,9 +16,37 @@ buybtn.forEach((element) => {
 
         if (value != 0) {
             addToTotal(value);
+            itemLeft(document.getElementsByClassName(`itens-left-${id}`), id);
         }
     });
 })
+
+//Function that change quantity
+var bamboo = [101, 64, 0];
+
+for (i = 0; i < bamboo.length; i++) {
+    if (bamboo[i] == 0) {
+        document.getElementById(`modal-container-0${i + 2}`).classList.add('out-of-stock');
+        document.getElementsByClassName(`about__container__item`)[i].classList.add('out-of-stock')
+    }
+}
+
+function itemLeft(item, id) {
+        
+    if (bamboo[id-2] > 0) {
+
+        bamboo[id-2]--
+
+        for (i = 0; i < item.length; i++) {
+            item[i].innerHTML = bamboo[id-2];
+        }
+    }
+}
+
+function checkIfThere() {
+    
+}
+
 
 //Changing Value
 var backed = 89914;
